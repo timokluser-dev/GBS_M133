@@ -13,10 +13,12 @@ namespace TimoKluser.ASPXWeb
                 {
                     double z = double.Parse(zahl1.Value);
                     ergebnis.InnerHtml = $"Die Eingabe ist: {z}";
+                    ergebnis.Style.Remove("color");
                 }
                 catch (Exception)
                 {
                     ergebnis.InnerHtml = $"No valid input";
+                    ergebnis.Style.Add("color", "#ff0000");
                 }
             }
             else
