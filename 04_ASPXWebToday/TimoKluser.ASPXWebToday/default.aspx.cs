@@ -13,7 +13,7 @@ namespace TimoKluser.ASPXWebToday
         protected void Page_Load(object sender, EventArgs e)
         {
             var formatedDate = DateTime.Now.ToString("dddd dd.MM.yyyy HH:mm:ss", new CultureInfo("en-US"));
-            lblToday.InnerText = $"Today is the {formatedDate}";
+            lblToday.InnerText = $"Today: {formatedDate}";
         }
     }
 }
