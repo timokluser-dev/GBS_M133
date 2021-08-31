@@ -19,8 +19,7 @@ namespace TimoKluser.SessionHandling
             Response.Cookies["MyFirstCookie"].Value = txtCookieValue.Text;
             Response.Cookies["MyFirstCookie"].Expires = DateTime.Now.AddMinutes(1);
             Response.Cookies["MyFirstCookie"].Domain = "localhost";
-
-            SetText();
+            Refresh();
         }
 
         protected void SetText()
@@ -29,6 +28,16 @@ namespace TimoKluser.SessionHandling
             {
                 lblStatus.Text = Request.Cookies["MyFirstCookie"].Value;
             }
+        }
+
+        protected string GetAbsoluteUrl()
+        {
+            return HttpContext.Current.Request.Url.AbsolutePath;
+        }
+
+        protected void Refresh()
+        {
+            Response.Redirect(GetAbsoluteUrl());
         }
     }
 }

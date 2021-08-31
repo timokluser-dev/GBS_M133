@@ -10,11 +10,10 @@
     <form id="form1" runat="server">
         <div>
             <asp:TextBox ID="txtCookieValue" runat="server" />
-        </div>
-        <div>
             <asp:Button Text="Create Cookie" ID="btnCreateCookie" runat="server" OnClick="btnCreateCookie_Click" />
         </div>
-        <div>
+
+        <div style="margin-top: 1rem">
             <asp:Label Text="Cookie Value: " runat="server" />
             <asp:Label Text="" ID="lblStatus" runat="server" />
         </div>
