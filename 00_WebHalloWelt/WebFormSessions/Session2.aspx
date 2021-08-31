@@ -24,6 +24,8 @@
         </p>
 
         <a href="default.aspx">zurück</a>
+
+        <asp:Button Text="Session Quit" ID="btnSessionQuit" OnClick="btnSessionQuit_Click" runat="server" />
     </div>
     </form>
 </body>

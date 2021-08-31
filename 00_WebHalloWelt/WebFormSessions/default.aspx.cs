@@ -11,6 +11,8 @@ namespace WebFormSessions
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            h2SessionId.InnerText = $"SessionID: {Session.SessionID}";
+
             if (IsPostBack)
             {
                 //Werte in Session speichern

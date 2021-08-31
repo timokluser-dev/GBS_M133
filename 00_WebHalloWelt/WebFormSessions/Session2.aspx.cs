@@ -23,5 +23,11 @@ namespace WebFormSessions
                 liste.Text += key + ": " + Session[key] + "<br />";
             }
         }
+
+        protected void btnSessionQuit_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("default.aspx");
+        }
     }
 }

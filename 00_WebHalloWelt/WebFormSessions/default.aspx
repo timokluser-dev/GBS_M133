@@ -12,6 +12,8 @@
     <form id="form1" runat="server">
     <div>
         <h2>Artikel auswählen</h2>
+        <h3 runat="server" id="h2SessionId"></h3>
+
         <p>
         Artikel:
         <asp:TextBox id="artikelName" runat="server" />
